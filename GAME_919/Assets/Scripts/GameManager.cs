@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         //yield return new WaitForSeconds(1);       //等待秒數(秒數)
         //print("測試 2");
 
-        AsyncOperation ao = SceneManager.LoadSceneAsync("AK47場景");  //取得場景資訊
+        AsyncOperation ao = SceneManager.LoadSceneAsync("遊戲場景");  //取得場景資訊
         ao.allowSceneActivation = false;                           //取消載入場景
 
 
@@ -57,11 +57,18 @@ public class GameManager : MonoBehaviour
                 ao.allowSceneActivation = true;
             }
         }
-        
 
-
-
-       
-      
     }
+        public void Replay()
+        {
+            SceneManager.LoadScene("介面");
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
+
+
 }
